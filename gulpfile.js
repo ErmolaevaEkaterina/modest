@@ -9,6 +9,8 @@ var browserSync = require('browser-sync'),
   gulpSourceMaps = require('gulp-sourcemaps'),
   gulpUglify = require('gulp-uglify');
 
+var normalize = 'node_modules/normalize.css/normalize.css';  
+
   gulp.task('html', function() {
   return gulp.src('./src/*.html')
       .pipe(gulp.dest('build/'))
@@ -23,9 +25,10 @@ var browserSync = require('browser-sync'),
   });
 
   gulp.task('css:build', function() {
-    return gulp.src('./src/css/**/*.less')
+    return gulp.src([normalize, './src/css/index.less'])
         .pipe(gulpSourceMaps.init())
         .pipe(gulpLess())
+        .pipe(gulpConcat('index.css'))
         .pipe(gulpClean())
         .pipe(gulpSourceMaps.write())
         .pipe(gulp.dest('build/css/'))

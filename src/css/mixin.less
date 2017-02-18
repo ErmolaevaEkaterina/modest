@@ -1,0 +1,13 @@
+.fontic(@path; @family; @protraction; @weight; @style){
+  @font-face {
+    font-family: @family;
+    src: url("@{path}/@{family}-@{protraction}.eot");
+      src: url("@{path}/@{family}-@{protraction}.eot?#iefix") format("embedded-opentype"),
+        url("@{path}/@{family}-@{protraction}.woff2") format("woff2"),
+        url("@{path}/@{family}-@{protraction}.woff") format("woff"),
+        url("@{path}/@{family}-@{protraction}.ttf") format("truetype"),
+        url("@{path}/@{family}-@{protraction}.svg#@{family}-@{protraction}") format("svg");
+      font-weight: @weight;
+      font-style: @style;
+  }
+}
