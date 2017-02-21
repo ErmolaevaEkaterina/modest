@@ -9,7 +9,7 @@ var browserSync = require('browser-sync'),
   gulpSourceMaps = require('gulp-sourcemaps'),
   gulpUglify = require('gulp-uglify');
 
-var normalize = 'node_modules/normalize.css/normalize.css';  
+var normalize = 'node_modules/normalize.css/normalize.css';
 
   gulp.task('html', function() {
   return gulp.src('./src/*.html')
@@ -29,7 +29,7 @@ var normalize = 'node_modules/normalize.css/normalize.css';
         .pipe(gulpSourceMaps.init())
         .pipe(gulpLess())
         .pipe(gulpConcat('index.css'))
-        .pipe(gulpClean())
+        //.pipe(gulpClean())
         .pipe(gulpSourceMaps.write())
         .pipe(gulp.dest('build/css/'))
         .pipe(browserSync.stream());

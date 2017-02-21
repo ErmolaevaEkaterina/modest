@@ -1,0 +1,136 @@
+.wrapper--content {
+    padding:85px 0;
+    border-bottom: 1px solid #dde1e4;
+}
+
+.chapter__name {
+    font-size: 36px;
+    text-transform: uppercase;
+    border-left: 10px solid #e1e6ea;
+    padding-left:15px;
+}
+
+.info {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+
+    &__block {
+        font-size: 16px;
+        color: rgb(141, 143, 146);       
+    }
+
+    &__list {       
+        counter-reset: heading;
+        padding-left:0;
+        // padding:0;
+    }
+
+    @media screen and (min-width : 992px) {
+        flex-direction: row;
+
+        &__block {
+            width: 60%;
+        }
+
+        &__list {
+
+        width: 40%;
+        padding-left: 30px;
+        }
+    
+        
+    }
+
+
+
+
+
+    &__item {
+
+        list-style-type: none;
+        display: block;
+        position: relative;
+        padding-left: 70px;
+        margin-bottom:30px;
+
+        &:before {
+            counter-increment: heading;
+            content: counter(heading);
+            background: #23b7a4;
+            color: #fff;
+            padding: 13px;
+            font-size: 20px;
+            position: absolute;
+            left:0;
+            top: 0;
+        }
+
+        &:nth-child(-n+9):before {
+            content: "0" counter(heading);
+        }
+
+
+    }
+
+    &__name {
+        text-transform: uppercase;
+        margin:0;
+        font-size: 18px;
+    }
+
+    &__descr {
+        color: rgb(141, 143, 146);
+        font-size: 16px;
+        margin-top: 20px;
+    }
+}
+
+.stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0, @bg-color:transparent, ) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+    background-color: @bg-color;
+    margin-right: 1px;
+}
+
+.sprite {
+    margin: 15px 0;
+    display: flex;
+    width: 50%;
+
+    &__item{
+        background-image: url(../images/spritesheet.png);
+        background-repeat: no-repeat;
+        display: block;   
+        cursor: pointer;
+        flex-grow:1;
+
+        &:hover {
+            background-color: #d0d5d9;
+        }
+
+        &--behanse {
+        .stitches-sprite(-10px, -6px, 60px, 60px, #c8cdd0);
+        }
+
+        &--dribble {
+            .stitches-sprite(-8px, -75px, 60px, 60px, #c8cdd0);
+        }
+    
+        &--facebook {
+            .stitches-sprite(-3px, -147px, 60px, 60px, #c8cdd0);
+        }
+    
+        &--google {
+            .stitches-sprite(-3px, -218px, 60px, 60px, #c8cdd0);
+        }
+    
+        &--twitter {
+            .stitches-sprite(-7px, -291px, 60px, 60px, #c8cdd0);
+        }
+    }
+}
+
+
+

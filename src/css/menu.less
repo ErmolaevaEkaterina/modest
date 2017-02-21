@@ -22,16 +22,17 @@
     display: flex;
     justify-content: space-between;
     width: 60%;
-    text-transform: uppercase;
+    
 
 
     &__item {
       color: #a4aead;
       padding: 7px 10px;  
-      border: 2px solid #1d2126;
-      border-radius: 3px; 
+      border: 2px solid #ffffff;
+      border-radius: 4px; 
       text-decoration: none;
       font-size: 14px;
+      text-transform: uppercase;
       text-shadow: 0.5px 0.5px #e3e6e6;
     }
 
@@ -48,6 +49,12 @@
 
     @media screen and  (min-width: 860px) {
       max-width: @menu-width;
+
+      &__item {
+        border: 2px solid #1d2126;
+        
+      }
+
     
     }
 
@@ -56,9 +63,6 @@
 
       margin-right: 20px;
 
-      &__logo {
-        padding-left: 20px;
-      }
 
     }
 
@@ -72,10 +76,7 @@
       align-items: center;
       
 
-      &__item {
-        border: 2px solid #ffffff;
-      }
-
+      
     
 
       &--active {

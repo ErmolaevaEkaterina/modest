@@ -3,16 +3,36 @@ body {
   font-family: @font-family;
 }
 
+p {
+  margin: 35px 0;
+}
+
 .wrapper {
   display: flex;
   justify-content:center;
 
   &--menu {
     background: #1d2126;  
+
+    .wrapper__container {
+      width: @container-width;
+
+    }
   }
 
   &__container {
-    width: @container-width;
+    max-width: @container-width;
+    flex-basis:@container-width;
+    padding: 0 15px;
     
+  }
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+
+  &__mem {
+    flex-grow: 1;
   }
 }

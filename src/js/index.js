@@ -8,13 +8,21 @@ $(document).ready(function () {
 
 	});
 
-   $('.wrapper--brand').slick({
+   $('.wrapper__slider').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 3000,
       arrows: false,
       dots:true
+    });
+
+   $('.team').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      arrows: false
     });
 
   
