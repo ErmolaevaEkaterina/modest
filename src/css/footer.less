@@ -27,6 +27,14 @@
         .communities {
           display: flex;                   
           height: 100%;
+
+          @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+            display: block;
+
+            & a {
+              display: inline-block;
+            }
+          }
          
 
           &__member {

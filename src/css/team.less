@@ -37,7 +37,9 @@
           height: 100%;
           width: 100%;
           align-items:center;  
-          justify-content:center;  
+          justify-content:center;            
+
+
 
           &__member {
             background-image: url(../images/spritesheet_2.png);
@@ -102,6 +104,20 @@
 
         .social {
           display: flex; 
+
+          @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+            /* IE10 IE11 */ 
+            display: block;
+            left: 20%;
+            top: 40%;            
+            margin: 0 auto;
+
+            & a {
+              display: block;
+              float: left;
+            }
+            
+          }
         }
       }
 
