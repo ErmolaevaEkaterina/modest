@@ -1,0 +1,67 @@
+.wrapper {
+	&--footer {
+		background-color: #3a454d;
+		padding:40px 0;		
+	}
+
+	&__container-foo {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap:wrap;
+	}
+}
+
+.copyright {
+	font-size: 14px;
+	margin:0;
+	color: #fff;
+	width: 40%;
+	padding-top: 15px;
+
+	@media screen and (max-width:990px) {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+        .communities {
+          display: flex;                   
+          height: 100%;
+         
+
+          &__member {
+            background-image: url(../images/spritesheet_2.png);
+            background-repeat: no-repeat;
+            display: block;
+            flex-grow:1;
+            width: 50px;
+            height: 50px;
+            max-width: 50px;
+            margin-right: 1px;
+
+            &:hover {
+            	opacity: 0.7;
+            }
+
+            &--tw {
+              .hover-sprite(-13px, -282px);
+            }
+    
+            &--face {
+              .hover-sprite(-13px, -79px);
+            }
+
+            &--skype {
+              .hover-sprite(-13px, -214px);
+            }
+
+            &--be {
+              .hover-sprite(-13px, -10px);
+            }
+    
+            &--link {
+              .hover-sprite(-10px, -145px);
+            }
+
+          }
+        }

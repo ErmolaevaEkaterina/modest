@@ -1,0 +1,140 @@
+.wrapper {
+
+	&--address{
+		flex-wrap:wrap;
+		padding: 85px 0;
+		
+	}
+
+	&__container-center{
+		display:flex;
+		position: relative;
+		justify-content:space-between;
+
+	 	@media screen and (max-width:1200px) {
+	 		flex-direction:column;
+	 		align-items: center;
+	 	}
+
+	}
+}
+
+.map {	
+	min-height: 350px;
+	margin:60px 0;
+}
+
+.address {
+	width: 48%;
+
+	 @media screen and (max-width:1200px) {
+	 	width: 100%;
+	 }
+	
+	&__caption {
+		text-transform: uppercase;
+		font-size: 20px;
+		font-weight: bold;
+		margin:0 ;
+		color: #292f36;
+	}
+
+	&__text {
+		font-size: 16px;
+		color: #8d8f92;
+		margin: 35px 0;
+	}
+}
+
+.form {
+	width: 45%;
+	max-width: 540px;
+	padding:30px;
+	background-color: #fff;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	position: absolute;
+	right: 0;
+    top: -200px;
+
+	&__row {
+		width: 50%;
+
+		&-small {
+			max-width: 240px;
+		}
+
+		&-text{
+			width: 100%;
+		}
+		
+
+		& span {
+			font-size: 14px;
+			font-weight: bold;
+			color: #8d8f92;
+			text-transform: uppercase;
+			margin:10px 0;
+			display: block;
+		}
+	}
+
+	&__input{
+
+		width: 100%;		
+		height: 44px;
+		border-radius:3px;
+		border: 1px;
+		box-sizing: border-box;
+		background-color: #eaeef1;
+		padding: 5px;
+
+			
+		    &-area{
+		    	resize:none;
+				width: 100%;
+				height: 160px;
+		    }
+	}
+
+	
+	&__submit {
+		color: #fff;
+    	padding: 16px 27px;
+    	background-color: #23b7a4;
+    	border: none;
+    	border-radius: 4px;
+    	text-decoration: none;
+    	font-size: 14px;
+    	text-transform: uppercase;
+    	margin-top: 30px;
+    	cursor: pointer;
+
+    	&:hover{
+    		background-color: #fff;
+    		border: 1px solid #8d8f92;
+    		color: #8d8f92;
+    	}
+    }
+
+    @media screen and (max-width:1200px) {
+    	position: inherit;
+    	display: block;
+    	width: 100%;
+    	top: 0;
+    	border: 2px solid #8d8f92;
+    	box-sizing: border-box;
+    	border-radius:3px;
+
+    	&__row {
+    		width: 100%;
+
+    		&-small {
+    			max-width: 100%;
+    		}
+    	}
+
+
+    }
+}

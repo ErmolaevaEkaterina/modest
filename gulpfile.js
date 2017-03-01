@@ -38,7 +38,7 @@ var normalize = 'node_modules/normalize.css/normalize.css';
   gulp.task('js:build', function() {
     return gulp.src('./src/js/**/*.js')
     .pipe(gulpSourceMaps.init())
-    .pipe(gulpUglify())
+    //.pipe(gulpUglify())
     .pipe(gulpSourceMaps.write())
     .pipe(gulp.dest('build/js/'))
     .pipe(browserSync.stream());

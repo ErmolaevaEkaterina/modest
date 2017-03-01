@@ -1,0 +1,114 @@
+.hover-sprite(@x: 0, @y: 0) {
+   background-position: @x @y;         
+   background-color: #3a454d;
+ }
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+
+  &__mem {
+    
+    flex-grow:1;
+    display: block;
+    margin: 0 15px;    
+
+    @media screan and (min-width:1125px){
+      max-width: 260px;
+    }
+    
+    &-image {
+        display: block;
+        position: relative;
+
+        img {
+
+          width: 100%;
+          display: block;
+        }
+
+        .social {
+          display: none; 
+          margin: auto; 
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          align-items:center;  
+          justify-content:center;  
+
+          &__member {
+            background-image: url(../images/spritesheet_2.png);
+            background-repeat: no-repeat;
+            display: block;
+            flex-grow:1;
+            width: 50px;
+            height: 50px;
+            max-width: 50px;
+            margin-right: 1px;
+
+            &--tw {
+              .hover-sprite(-13px, -282px);
+            }
+    
+            &--face {
+              .hover-sprite(-13px, -79px);
+            }
+    
+            &--link {
+              .hover-sprite(-10px, -145px);
+            }
+
+          }
+        }
+    }
+
+    &-info {
+      padding:20px;     
+      background-color: #e1e6ea;
+    }
+
+    &-name {
+      font-weight: bold;
+      font-size: 16px;
+      margin:0 0 10px;
+    }
+
+    &-descr {  
+      font-size: 14px;
+      color: rgb(141, 143, 146);
+      margin: 0;  
+    }
+
+    &:hover {
+      cursor: pointer;        
+      color: #fff;  
+    }
+
+    &:hover & {
+
+      &-info {
+        background-color: #3a454d;            
+      }
+
+      &-descr {  
+        color: #fff; 
+      }
+
+      &-image {
+          opacity: 0.8;      
+
+        .social {
+          display: flex; 
+        }
+      }
+
+    }
+
+  }
+
+}
+
+

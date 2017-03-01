@@ -1,0 +1,37 @@
+.wrapper-feature {
+	padding: 85px 0;
+    background-color: #3a454d;
+}
+.feature {
+	display: flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
+
+	@media screen and (min-width:1200px){
+		flex-direction:row;
+	}
+
+	&__item {
+		margin-top: 30px;
+		max-width: 360px;
+		color: #fff;
+
+		& img {
+			width: 100%;
+			display: block;
+		}
+	}
+
+	&__head {
+		font-size: 18px;
+		font-weight: bold;
+		margin:55px 0 25px;
+		text-transform: uppercase;
+	}
+
+	&__info {
+		font-size: 16px;
+		margin:0 0 30px;
+	}
+}
